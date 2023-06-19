@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="454.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="at.htlleonding.javafx.movieratings.MovieRatingController">
+  <children>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="301.0">
+      <children>
+        <Label fx:id="txtMovieCount" text="Movies: N/A" />
+        <Label text=" | " />
+        <Label fx:id="txtAverageRating" text="Average Rating: N/A" />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="64.0" prefWidth="482.0" spacing="10.0">
+      <children>
+        <Label text="Year Filter" />
+        <Slider fx:id="sldYearFilter" minorTickCount="1" showTickLabels="true" showTickMarks="true" />
+      </children>
+    </HBox>
+    <TableView fx:id="tbvMovieRatings" prefHeight="199.0" prefWidth="386.0">
+      <columns>
+        <TableColumn fx:id="tbcTitle" prefWidth="173.54631286859512" text="Title" />
+        <TableColumn fx:id="tbcYear" prefWidth="55.81397247314453" text="Year" />
+        <TableColumn fx:id="tbcRating" prefWidth="71.51155090332031" text="Rating" />
+      </columns>
+    </TableView>
+    <HBox alignment="CENTER" prefHeight="52.0" prefWidth="436.0" spacing="10.0">
+      <children>
+        <TextField fx:id="txtName" prefHeight="27.0" prefWidth="179.0" />
+        <TextField fx:id="txtYear" prefHeight="27.0" prefWidth="48.0" />
+        <TextField fx:id="txtRating" prefHeight="27.0" prefWidth="48.0" />
+        <Button mnemonicParsing="false" onAction="#addRating" prefHeight="25.0" prefWidth="109.0" text="Add New Rating" />
+      </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="454.0" spacing="10.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#removeSelected" text="Remove Selected" />
+      </children>
+    </HBox>
+  </children>
+</VBox>
